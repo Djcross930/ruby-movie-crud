@@ -25,5 +25,10 @@ class MoviesController < ApplicationController
     render json: movie.as_json
   end
 
+  def destroy
+    movie = Movie.find_by(id: params[:id])
+    movie.destroy
+    render json: {message: "Movie destroyed"}
+  end
 
 end
