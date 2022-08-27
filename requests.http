@@ -13,3 +13,11 @@ Content-Type: application/json
 {
   "name": "The Terminator"
 }
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "name": "The Terminator 6",
+  "year": "1997"
+}

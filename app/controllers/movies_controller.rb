@@ -15,7 +15,15 @@ class MoviesController < ApplicationController
     movie.year = params[:year] || movie.year
     movie.save
     render json: movie.as_json
-
   end
+
+  def create
+    movie = Movie.new
+    movie.name = params[:name]
+    movie.year = params[:year]
+    movie.save
+    render json: movie.as_json
+  end
+
 
 end
