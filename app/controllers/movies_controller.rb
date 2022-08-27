@@ -9,5 +9,13 @@ class MoviesController < ApplicationController
     render json: movie.as_json
   end
 
+  def update
+    movie = Movie.find_by(id: params[:id])
+    movie.name = params[:name] || movie.name
+    movie.year = params[:year] || movie.year
+    movie.save
+    render json: movie.as_json
+
+  end
 
 end
